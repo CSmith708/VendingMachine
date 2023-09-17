@@ -77,10 +77,10 @@ public class Main {
         //Welcome the user
         System.out.println("Welcome to the Vending Machine!");
 
-            //Print visual contents
+        //Print visual contents
         System.out.println("Vending Machine Contents:");
             vendingMachine.display();
-        System.out.println("Getting products from the vending machine:");
+        System.out.println("Product Selection Numbers:");
         for (int i = 0; i <= vendingMachine.products[2].length - 1; i++) {
                 System.out.println(i + 1 + ". " + vendingMachine.getProduct(0, i, 0));
                 }
@@ -99,8 +99,6 @@ public class Main {
         for (int i = 0; i <= vendingMachine.products[2].length - 1; i++) {
                 System.out.println(i + 31 + ". " + vendingMachine.getProduct(5, i, 0));
             }
-
-
 
         //Create integers for while loop to iterate through the depth of the array
         int a = 0; int b = 0; int c = 0; int d = 0; int e = 0; int f = 0; int g = 0; int h = 0; int i = 0; int j = 0; int k = 0; int l = 0; int m = 0; int n = 0; int o = 0; int p = 0; int q = 0; int r = 0; int s = 0; int t = 0; int u = 0; int v = 0; int w = 0; int x = 0; int y = 0; int z = 0; int aa = 0; int ab = 0; int ac = 0; int ad = 0; int ae = 0; int af = 0; int ag = 0; int ah = 0; int ai = 0;int aj = 0;

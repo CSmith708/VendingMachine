@@ -9,6 +9,9 @@ public class Payment {
         while (true) {
             System.out.println("Please insert cash: ");
             double cashIn = psc.nextDouble();
+            if (itemCost == 404){
+                break;
+            }
             if (cashIn < itemCost) {
                 System.out.println("Insufficient payment. Please insert more coins.");
             } else {
