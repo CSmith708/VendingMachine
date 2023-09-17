@@ -31,19 +31,14 @@
                 return "Sorry, This Product Is Sold Out \n";
             }
         }
-        public String vendProduct(int row, int col, int depth) {
-            if (row >= 0 && row < products.length && col >= 0 && col < products[0].length && depth >= 0 && depth < products[1].length) {
-                String product = products[row][col][depth];
-                if (product != null) {
-                    products[row][col][depth] = null;
-                    return product;
-                } else {
-                    return "Empty";
-                }
-            } else {
-                return "Sorry, This Product Is Sold Out \n";
+        public void vendProduct(int row, int col, int depth) {
+            String product = products[row][col][depth];
+            if (product != null) {
+                products[row][col][depth] = null;
             }
+            System.out.println("Dispensing " + product);
         }
+
 
 
         // Method to display the current state of the vending machine
