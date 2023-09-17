@@ -2,6 +2,7 @@
         //Define the class level Multi-dimensional array to store product information
         public String[][][] products;
 
+
         //Constructor Method takes input to create 3-dimensional array
         public VendingMachine(int rows, int cols, int depth) {
             // Declare and dimension a 3-dimensional array of strings
@@ -9,7 +10,7 @@
         }
 
         // Method to add a product to the vending machine element/slot in the Multi-dimensional array
-        public void addProduct(int row, int col, int depth, String productName, int cals, double price) {
+        public void addProduct(int row, int col, int depth, String productName) {
             if (row >= 0 && row < products.length && col >= 0 && col < products[0].length && depth >= 0 && depth < products[1].length) {
                 products[row][col][depth] = productName;
             } else {
@@ -30,9 +31,22 @@
                 return "Invalid location";
             }
         }
+        public String vendProduct(int row, int col, int depth) {
+            if (row >= 0 && row < products.length && col >= 0 && col < products[0].length && depth >= 0 && depth < products[1].length) {
+                String product = products[row][col][depth];
+                if (product != null) {
+                    products[row][col][depth] = null;
+                    return product;
+                } else {
+                    return "Empty slot";
+                }
+            } else {
+                return "Invalid location";
+            }
+        }
+
 
         // Method to display the current state of the vending machine
-        //Uses the nested for loop construct used to work with a Multi-dimensional array
         public void display() {
             for (int i = 0; i < products.length; i++) {
                 for (int j = 0; j < products[0].length; j++) {
