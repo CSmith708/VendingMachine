@@ -25,10 +25,10 @@
                 if (product != null) {
                     return product;
                 } else {
-                    return "Empty slot";
+                    return "Empty";
                 }
             } else {
-                return "Invalid location";
+                return "Sorry, This Product Is Sold Out \n";
             }
         }
         public String vendProduct(int row, int col, int depth) {
@@ -38,10 +38,10 @@
                     products[row][col][depth] = null;
                     return product;
                 } else {
-                    return "Empty slot";
+                    return "Empty";
                 }
             } else {
-                return "Invalid location";
+                return "Sorry, This Product Is Sold Out \n";
             }
         }
 

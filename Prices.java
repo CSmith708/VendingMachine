@@ -1,7 +1,7 @@
 public class Prices {
     public double[][][] prices;
 
-    public Prices(int rows, int cols, int depth){
+    public Prices(int rows, int cols, int depth) {
         prices = new double[rows][cols][depth];
     }
 
@@ -12,16 +12,18 @@ public class Prices {
             System.out.println("Invalid location for adding a price.");
         }
     }
+
     public double getPrice(int row, int col, int depth) {
         if (row >= 0 && row < prices.length && col >= 0 && col < prices[0].length && depth >= 0 && depth < prices[1].length) {
             double price = prices[row][col][depth];
-            if (prices != null) {
+            if (price != 0.0) {
                 return price;
             } else {
-                return 0;
+                return 404;
             }
-        } else {
-            return 0;
+        }else {
+            return 404;
         }
     }
 }
+
