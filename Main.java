@@ -139,7 +139,6 @@ public class Main {
                     System.out.println("You chose " + vendingMachine.getProduct(0, 3, d));
                     System.out.println("The price is $" + priceList.getPrice(0, 3, d));
                     System.out.println("Product Calories: " + calories.getCals(0, 3, d));
-                    System.out.println("Product Calories: " + calories.getCals(0, 3, d));
                     payment.acceptPayment(priceList.getPrice(0, 3, d));
                     vendingMachine.vendProduct(0, 3, d);
                     d += 1;
